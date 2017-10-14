@@ -1,0 +1,37 @@
+{
+  "name": "dronezone",
+  "version": "1.0.0",
+  "description": "Stores markup for DroneZone PSD template",
+  "main": "index.js",
+  "scripts": {
+    "dev-build": "SET \"NODE_ENV=development\" && gulp development",
+    "prod-build": "SET \"NODE_ENV=production\" && gulp production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeyKip/dronezone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeyKip/dronezone/issues"
+  },
+  "homepage": "https://github.com/JeyKip/dronezone#readme",
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-if": "^2.0.2",
+    "gulp-less": "^3.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.1",
+    "path": "^0.12.7"
+  }
+}
