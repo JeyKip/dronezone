@@ -1,0 +1,51 @@
+.principle {
+
+    &__icon {
+        
+        display: block;
+        margin: 0 auto;
+        background-image: url('principles.png');
+        background-repeat: no-repeat;
+
+        &_from-air {
+            background-position:0 -98px;
+            width: 103px;
+            height: 57px;
+        }
+
+        &_best-drones {
+            background-position: 0 0;
+            width: 97px;
+            height: 98px;
+        }
+
+        &_speed {
+            background-position:0 -250px;
+            width: 84px;
+            height: 84px;
+        }
+
+        &_long-range {
+            background-position:0 -155px;
+            width: 71px;
+            height: 95px;
+        }
+    }
+
+    &__title {
+        @font-size: 1.875rem;
+        @font-size-mobile: 0.75 * @font-size;
+        @line-height: 2rem;
+        @line-height-mobile: 0.75 * @line-height;
+
+        display: block;
+        margin: 0.25rem 0 0;
+        font-size: @font-size-mobile;
+        font-weight: bold;
+        line-height: @line-height-mobile;
+    }
+
+    &__description {
+        margin: 0;
+    }
+}

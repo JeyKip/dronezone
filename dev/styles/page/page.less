@@ -1,9 +1,47 @@
-.page {
-    margin: 0;
-    padding: 0;
-    background-image: url('GoToWebinar 000.png');
+@import '../mixins/variables.less';
 
-    &__header {
-        background-color: yellowgreen;
+.page {
+    
+    background-color: @base-white-color;
+    font-family: @base-font-family;
+    color: @base-text-color;
+
+    &__about {
+        background-color: @bg-alternate-color;
+        padding: 1rem 0.5rem;
+        text-align: center;
+    }
+
+    &__drones {
+        padding: 1rem 0.5rem;
+    }
+
+    &__products {
+        background-color: @bg-alternate-color;
+        padding: 1rem 0.5rem;
+    }
+
+    &__products > .product:not(:last-child) {
+        margin-bottom: 0.75rem; // TODO: убрать для больших экранов
+    }
+
+    &__contact {
+        padding: 1rem 0.5rem;
+        text-align: center;
+    }
+
+    &__map-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__footer {
+        padding: 1rem 0.5rem;
+        text-align: center;
+    }
+
+    &__footer-text {
+        margin: 0;
+        color: #a7acbc;
     }
 }

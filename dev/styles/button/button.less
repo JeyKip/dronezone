@@ -1,0 +1,62 @@
+.button {
+    @font-size: 1.125rem;
+    @font-size-mobile: 0.85 * @font-size;
+    @line-height: 2rem;
+    @line-height-mobile: 0.75 * @line-height;
+
+    position: relative;
+    display: inline-block;
+    outline: none;
+    font-size: @font-size-mobile;
+    line-height: @line-height-mobile;
+    color: @base-white-color;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 1.25rem;
+    cursor: pointer;
+
+    &_role_play-source::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0.7rem;
+        left: 0.5rem;
+        width: 0;
+        height: 0;
+        border: 0.5rem solid @base-white-color;
+        border-left-width: 1rem;
+        border-right-width: 0;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    &_theme_transparent {
+        background-color: transparent;
+        border-color: @base-white-color;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: @base-white-color;
+            color: rgb(211, 39, 33);
+            
+            &::before {
+                border-left-color: rgb(211, 39, 33);
+            }
+        }
+    }
+
+    &_theme_blue {
+        @btn-color: #264699;
+
+        background-color: @btn-color;
+        background-image: linear-gradient(-118deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%);
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: @base-white-color;
+            color: @btn-color;
+            border-color: @btn-color;
+        }
+    }
+}

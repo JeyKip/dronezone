@@ -1,0 +1,16 @@
+.input {
+    @font-size: 1.125rem;
+    @font-size-mobile: 0.85 * @font-size;
+    @line-height: 2rem;
+    @line-height-mobile: 0.75 * @line-height;
+
+    display: inline-block;
+    font-size: @font-size-mobile;
+    line-height: @line-height-mobile;
+    color: @base-white-color;
+    padding: 0.5rem 1rem;
+
+    &::placeholder {
+        color: @base-white-color;
+    }
+}

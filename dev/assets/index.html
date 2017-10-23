@@ -6,93 +6,118 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <link rel="stylesheet" href="styles/index.min.css">
+    <script src="scripts/script.min.js"></script>
     <title>DroneZone - Film your event with us!</title>
 </head>
 <body class="page">
-    <header class="page__header" id="home">
-        <div class="page__menu">
-            <div class="logo">
-                <a href="#" class="logo__link"><strong>Drone</strong>Zone</a>
+    <header class="header" id="home">
+        <div class="header__navigation">
+            <div class="logo header__logo clearfix">
+                <a class="logo__link"><strong>Drone</strong>Zone</a>
             </div>
-            <nav class="menu">
+            <button type="button" class="burger header__burger burger_size_normal clearfix"></button>
+            <nav class="menu clearfix">
                 <ul class="menu__items">
                     <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
                     <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
                     <li class="menu__item"><a href="#drones" class="menu__link">Our drones</a></li>
-                    <li class="menu__item"><a href="#realizations" class="menu__link">Our realizations</a></li>
+                    <li class="menu__item"><a href="#products" class="menu__link">Our realizations</a></li>
                     <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
                 </ul>
             </nav>
         </div>
-        <section class="page__tagline">
-            <h1 class="section-title">Film your event with us!</h1>
-            <p class="section-text section-text_size_normal">
+        <section class="tagline header__tagline">
+            <h1 class="title tagline__title">Film your event with us!</h1>
+            <p class="text tagline__text text_font-size_s text_line-height_m">
                 Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.
             </p>
-            <p class="section-text section-text_size_normal">
+            <p class="text tagline__text text_font-size_s text_line-height_m">
                 Nunc vel nibh tempor, pharetra lectus congue, luctus orci.
             </p>
-            <div class="buttons-container">
-                <a href="#" class="button button_theme_transparent">Ask for price</a>
-                <a href="#" class="button button_theme_transparent button_role_play-source">Watch video</a>
+            <div class="tagline__buttons-container">
+                <a class="button button_theme_transparent">Ask for price</a>
+                <a class="button button_theme_transparent button_role_play-source">Watch video</a>
             </div>
         </section>
     </header>
-    <section class="page__about" id="about">
-        <dl class="principles">
-            <dt class="principles__item-title">From air</dt>
-            <dd class="principles__item-definition">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</dd>
-            <dt class="principles__item-title">Best drones</dt>
-            <dd class="principles__item-definition">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</dd>
-            <dt class="principles__item-title">Speed</dt>
-            <dd class="principles__item-definition">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</dd>
-            <dt class="principles__item-title">Long range</dt>
-            <dd class="principles__item-definition">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</dd>
-        </dl>
-        <a href="#" class="button button_theme_blue">Ask for price</a>
+    <section class="about page__about" id="about">
+        <div class="about__principles flex-container flex-container_wrapped flex-container_align_center">
+            <div class="principle">
+                <i class="principle__icon principle__icon_from-air"></i>
+                <span class="principle__title text-gradient text-gradient_color_redorange">From air</span>
+                <p class="principle__description text text_font-size_s text_line-height_m">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</p>
+            </div>
+            <div class="principle">
+                <i class="principle__icon principle__icon_best-drones"></i>
+                <span class="principle__title text-gradient text-gradient_color_redorange">Best drones</span>
+                <p class="principle__description text text_font-size_s text_line-height_m">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</p>
+            </div>
+            <div class="principle">
+                <i class="principle__icon principle__icon_speed"></i>
+                <span class="principle__title text-gradient text-gradient_color_redorange">Speed</span>
+                <p class="principle__description text text_font-size_s text_line-height_m">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</p>
+            </div>
+            <div class="principle">
+                <i class="principle__icon principle__icon_long-range"></i>
+                <span class="principle__title text-gradient text-gradient_color_redorange">Long range</span>
+                <p class="principle__description text text_font-size_s text_line-height_m">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</p>
+            </div>
+        </div>
+        <a class="button button_theme_blue">Ask for price</a>
     </section>
-    <section class="page__drones" id="drones">
-        <h2 class="section-title">Nature from the air</h1>
-        <p class="section-text section-text_size_normal"></p>
-        <ol class="ordered-list">
-            <li class="ordered-list__item">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.</li>
-            <li class="ordered-list__item">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</li>
-            <li class="ordered-list__item">Integer sit amet lacus egestas, semper est quis, viverra ex. Mauris consequat libero metus, nec ultricies sem efficitur quis.</li>
-            <li class="ordered-list__item">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.</li>
-            <li class="ordered-list__item">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</li>
+    <section class="drones page__drones" id="drones">
+        <h2 class="title drones__title text-gradient text-gradient_color_redorange">Nature from the air</h2>
+        <p class="text drones__description text_font-size_s text_line-height_l">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan. Integer sit amet lacus egestas, semper est quis, viverra ex.</p>
+        <ol class="advantages-list drones__advantages-list">
+            <li class="advantages-list__item">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.</li>
+            <li class="advantages-list__item">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</li>
+            <li class="advantages-list__item">Integer sit amet lacus egestas, semper est quis, viverra ex. Mauris consequat libero metus, nec ultricies sem efficitur quis.</li>
+            <li class="advantages-list__item">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.</li>
+            <li class="advantages-list__item">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</li>
         </ol>
     </section>
-    <section class="page__realizations" id="realizations">
+    <section class="products page__products" id="products">
         <article class="product">
-            <div class="product-description">
-                <h2 class="section-title">Nature from the air</h2>
-                <p class="section-text section-text_size_normal">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</p>
-                <a href="#" class="button button_theme_blue">Ask for price</a>
+            <div class="product__article">
+                <h2 class="title product__title text-gradient text-gradient_color_redorange">Nature from the air</h2>
+                <p class="text product__description text_font-size_s text_line-height_l">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</p>
+                <a class="button button_theme_blue">Ask for price</a>
             </div>
-            <div class="product-video">Video is here</div>
+            <div class="products__video">
+                <div class="product__video-container">
+                    <img class="product__video" src="styles/img/product/product-video-1.png" alt="Nature from the air">
+                    <a class="product__video-play-button"></a>
+                </div>
+            </div>
         </article>
         <article class="product">
-            <div class="product-description">
-                <h2 class="section-title">City from the air</h2>
-                <p class="section-text section-text_size_normal">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan. Integer sit amet lacus egestas, semper est quis, viverra ex. Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</p>
-                <a href="#" class="button button_theme_blue">Ask for price</a>
+            <div class="product__article">
+                <h2 class="title product__title text-gradient text-gradient_color_redorange">City from the air</h2>
+                <p class="text product__description text_font-size_s text_line-height_l">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan. Integer sit amet lacus egestas, semper est quis, viverra ex. Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</p>
+                <a class="button button_theme_blue">Ask for price</a>
             </div>
-            <div class="product-video">Video is here</div>
+            <div class="products__video">
+                <div class="product__video-container">
+                    <img class="product__video" src="styles/img/product/product-video-2.png" alt="City from the air">
+                    <a class="product__video-play-button"></a>
+                </div>
+            </div>
         </article>
     </section>
-    <section class="page__contact" id="contact">
-        <div class="page__signup">
-            <h2 class="section-title"></h2>
-            <form action="#" class="form">
-                <input type="email" class="input">
-                <button type="submit" class="button button_theme_transparent">Send</button>
-            </form>
-        </div>
-        <div class="map">Map is here</div>
+    <section class="contact page__contact" id="contact">
+        <h2 class="title contact__title">Sign up for our newsletter</h2>
+        <form action="/" class="contact-form">
+            <div class="contact-form__control-group">
+                <input type="email" class="input contact-form__email" placeholder="Email address">
+                <button type="submit" class="button contact-form__button button_theme_transparent">Send</button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <img class="page__map-image" src="styles/img/page/map.png" alt="Our location">
     </section>
     <footer class="page__footer">
-        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Try awsome tool for desgners </p>
-        <strong>symu.co</strong>
+        <p class="text page__footer-text text_font-size_s text_line-height_l">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Try awsome tool for desgners <strong>symu.co</strong></p>
     </footer>
 </body>
 </html>

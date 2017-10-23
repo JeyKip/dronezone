@@ -1,0 +1,40 @@
+.contact-form {
+    @input-border-color: rgba(255, 255, 255, 0.15);
+    @input-focus-border-color: rgba(255, 255, 255, 0.3);
+    @button-border-color: rgba(255, 255, 255, 0.3);
+    @border-radius: 1.25rem;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    &__control-group {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        border-radius: @border-radius;
+    }
+
+    &__email {
+        width: 100%;
+        border: 1px solid @input-border-color;
+        border-radius: @border-radius;
+        outline: none;
+        background-color: transparent;
+        padding-right: 1.5rem;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        &:focus {
+            border-color: @input-focus-border-color;
+        }
+    }
+
+    &__button {
+        margin-left: -1.25rem;
+        border-color: @button-border-color;
+        box-shadow: 0 0 0 9999px  rgba(255, 255, 255, 0.15);
+    }
+}

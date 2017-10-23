@@ -1,0 +1,45 @@
+.advantages-list {
+
+    counter-reset: list-item;
+    list-style: none;
+
+    &__item {
+        @font-size: 0.875rem;
+        @font-size-mobile: @font-size;
+        @line-height: 1.5rem;
+        @line-height-mobile: 0.75 * @line-height;
+
+        counter-increment: list-item;
+        position: relative;
+        padding-left: 3.5rem;
+
+        font-size: @font-size-mobile;
+        line-height: @line-height-mobile;
+        vertical-align: middle;
+
+        color: #a7acbc;
+    }
+
+    &__item::before {
+        @radius: 2rem;
+
+        content: counter(list-item);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        
+        width: @radius;
+        height: @radius;
+        line-height: @radius;
+
+        border: 1px solid #c7cde0;
+        box-sizing: border-box;
+        border-radius: 50%;
+
+        font-size: 1rem;
+        color: #3f4e76;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
