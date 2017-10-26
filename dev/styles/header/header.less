@@ -1,29 +1,133 @@
 .header {
-    background-image: linear-gradient(51deg, rgb(203,0,53) 0%, rgb(224,105,0) 100%);
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: linear-gradient(51deg, rgb(203,0,53) 0%, rgb(224,105,0) 100%);
+
+        @media screen and (min-width: 1024px) {
+            opacity: 0.7;
+        }
+    }
+
+    &::after {
+        @media screen and (min-width: 1024px) {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(51deg, rgb(203,0,53) 0%, rgb(224,105,0) 100%);
+            filter: brightness(125%) contrast(170%);
+            z-index: -3;
+        }
+    }
+
+    &__image-container {
+        display: none;
+
+        @media screen and (min-width: 1024px) {
+            display: block;
+            position: relative;
+            content: url('header-bg.png');
+            width: 100%;
+            height: auto;
+            margin-top: -140px;
+            margin-left: auto;
+            margin-right: auto;
+            filter: contrast(170%);
+            z-index: -2;
+        }
+    }
+
+    &__content {
+        max-width: 1340px;
+        margin: 0 auto;
+    }
 
     &__navigation {
         position: fixed;
         top: 0;
         left: 0;
-        box-sizing: border-box;
         width: 100%;
         background-color: #333333;
         z-index: 100;
+
+        @media screen and (min-width: 768px) {
+            position: static;
+            display: flex;
+            align-items: center;
+            width: auto;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding-top: 1rem;
+            background-color: transparent;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding-top: 2rem;
+        }
+
+        @media screen and (min-width: 1400px) {
+            padding-top: 3rem;
+        }
     }
 
     &__logo {
         float: left;
-        margin: 0.5rem;
+        margin: 0.25rem 0.5rem 0.125rem;
+
+        @media screen and (min-width: 768px) {
+            float: none;
+            margin: 0;
+            margin-right: 0.5em;
+        }
+    }
+
+    &__menu {
+        width: 100%;
+        max-height: 0px;
+
+        @media screen and (min-width: 768px) {
+            width: auto;
+            max-height: none;
+            margin-left: auto;
+        }
     }
 
     &__burger {
         float: right;
-        margin-right: 0.5rem;
-        margin-top: 1rem;
+        margin: 0.25rem 0.5rem 0.125rem;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
 
     &__tagline {
         padding: 3.75rem 0.5rem 1rem;
         text-align: center;
+
+        @media screen and (min-width: 768px) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 5rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding-top: 8rem;
+        }
+
+        @media screen and (min-width: 1400px) {
+            padding-top: 13.625rem;
+        }
     }
 }

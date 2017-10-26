@@ -7,7 +7,7 @@
             menu.style.maxHeight = menuList.clientHeight + 'px';
         }
         else {
-            menu.style.maxHeight = '0px';
+            menu.style.maxHeight = null;
         }
     }
 

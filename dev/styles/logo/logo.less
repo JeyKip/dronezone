@@ -1,14 +1,21 @@
 .logo {
 
     &__link {
-        @font-size: 2rem;
-        @font-size-mobile: 0.65 * @font-size;
-        @line-height: 1.5rem;
-        @line-height-mobile: 0.75 * @line-height;
-
-        font-size: @font-size-mobile;
-        line-height: @line-height-mobile;
+        font-size: 1.25em;
+        line-height: 1.5;
         text-decoration: none;
-        color: white;
+        color: @base-white-color;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.5em;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 1.75em;
+        }
+
+        @media screen and (min-width: 1400px) {
+            font-size: 2.25em;
+        }
     }
 }

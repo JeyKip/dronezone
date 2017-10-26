@@ -1,23 +1,28 @@
 .text {
-
     &_font-size {
         &_s {
-            font-size: @font-size-mobile-s;
-        }
-        &_m {
-            font-size: @font-size-mobile-m;
-        }
-        &_l {
-            font-size: @font-size-mobile-l;
+            font-size: 1em;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.125em;
+            }
         }
     }
 
     &_line-height {
-        &_m {
-            line-height: @line-height-mobile-m;
+        &_s {
+            line-height: 1.4;
+
+            @media screen and (min-width: 768px) {
+                line-height: 1.666667;
+            }
         }
-        &_l {
-            line-height: @line-height-mobile-l;
+        &_m {
+            line-height: 1.5;
+
+            @media screen and (min-width: 768px) {
+                line-height: 2;
+            }
         }
     }
 }

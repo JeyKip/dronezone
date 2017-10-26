@@ -1,6 +1,14 @@
 .burger {
+    .burger-height (@width) {
+        height: 0.1 * @width;
+    }
+    
+    .burger-pseudo-top (@width, @factor: 1) {
+        top: @factor * 0.25 * @width;
+    }
+    
     position: relative;
-    display: block;
+    display: inline-block;
     border: none;
     outline: none;
     cursor: pointer;
@@ -11,7 +19,7 @@
     &::before,
     &::after {
         content: '';
-        display: block;
+        display: inline-block;
         position: absolute;
         top: 0;
         left: 0;
@@ -31,25 +39,21 @@
     }
 
     &_size_normal {
-        @burger-width: 1.75rem;
-        @burger-layer-height: 0.1 * @burger-width;
-        @burger-layer-space: 0.25 * @burger-width;
-        @burger-total-height: 3 * @burger-layer-height + 2 * (@burger-layer-space - @burger-layer-height);
+        @burger-width-mobile: 2em;
 
-        width: @burger-width;
-        height: @burger-layer-height;
+        width: @burger-width-mobile;
+        .burger-height(@burger-width-mobile);
 
         &::before {
-            top: -@burger-layer-space;
+            .burger-pseudo-top(@burger-width-mobile, -1);
         }
 
         &::after {
-            top: @burger-layer-space;
+            .burger-pseudo-top(@burger-width-mobile);
         }
     }
 
     &_opened {
-        // width: 0.95 * @burger-width;
         transform: rotate(45deg);
         transition-delay: 0.12s;
         transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
