@@ -11,38 +11,123 @@
         background-color: @bg-alternate-color;
         padding: 1rem 0.5rem;
         text-align: center;
+
+        @media screen and (min-width: 1024px) {
+            padding-top: 5rem;
+            padding-bottom: 4rem;
+        }
+
+        @media screen and (min-width: 1400px) {
+            padding-top: 7.5rem;
+            padding-bottom: 6rem;
+        }
     }
 
     &__drones {
         padding: 1rem 0.5rem;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+            padding-left: 4rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding-top: 5rem;
+            padding-bottom: 4rem;
+
+            background-image: url('drone.png');
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: 50%;
+        }
+
+        @media screen and (min-width: 1400px) {
+            padding-top: 7.5rem;
+            padding-bottom: 6rem;
+        }
+
+        @media screen and (min-width: 1600px) {
+            background-size: contain;
+        }
+
+        @media screen and (min-width: 1750px) {
+            padding-left: 12rem;
+        }
+
+        @media screen and (min-width: 1850px) {
+            padding-left: 18.75rem;
+        }
     }
 
     &__products {
         background-color: @bg-alternate-color;
-        padding: 1rem 0.5rem;
-    }
 
-    &__products > .product:not(:last-child) {
-        margin-bottom: 0.75rem; // TODO: убрать для больших экранов
+        & > .product:not(:last-child) {
+            margin-bottom: 0.75rem;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__contact {
         padding: 1rem 0.5rem;
         text-align: center;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 3rem;
+            padding-bottom: 3.5rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding-top: 5rem;
+            padding-bottom: 6rem;
+        }
+
+        @media screen and (min-width: 1400px) {
+            padding-top: 8rem;
+            padding-bottom: 9rem;
+        }
+
+        @media screen and (min-width: 1600px) {
+            padding-top: 10rem;
+            padding-bottom: 11rem;
+        }
     }
 
     &__map-image {
-        max-width: 100%;
+        width: 100%;
         height: auto;
     }
 
     &__footer {
         padding: 1rem 0.5rem;
         text-align: center;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding-top: 4.1875rem;
+            padding-bottom: 8rem;
+        }
+
+        @media screen and (min-width: 1400px) {
+            padding-bottom: 13rem;
+        }
+
+        @media screen and (min-width: 1600px) {
+            padding-bottom: 17.5rem;
+        }
     }
 
     &__footer-text {
-        margin: 0;
+        margin: 0 auto;
         color: #a7acbc;
+        max-width: 38em;
     }
 }

@@ -1,5 +1,46 @@
 .about {
-    &__principles > .principle {
-        margin-bottom: 0.75rem;
+    &__principles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1240px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 3.5rem;
+        }
+
+        @media screen and (min-width: 1400px) {
+            margin-bottom: 5rem;
+        }
+
+        & > .principle {
+            width: 100%;
+            margin-bottom: 0.75rem;
+            box-sizing: border-box;
+            
+            @media screen and (min-width: 480px) {
+                width: 50%;
+
+                &:nth-child(2n) {
+                    padding-left: 0.5em;
+                }
+
+                &:nth-child(2n + 1) {
+                    padding-right: 0.5em;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 25%;
+                max-width: 250px;
+
+                &:nth-child(n) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
     }
 }

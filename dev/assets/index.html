@@ -46,7 +46,7 @@
         <div class="header__image-container"></div>
     </header>
     <section class="about page__about" id="about">
-        <div class="about__principles flex-container flex-container_wrapped flex-container_align_center">
+        <div class="about__principles">
             <div class="principle">
                 <i class="principle__icon principle__icon_from-air"></i>
                 <span class="principle__title text-gradient text-gradient_color_redorange">From air</span>
@@ -71,41 +71,43 @@
         <a class="button button_theme_blue">Ask for price</a>
     </section>
     <section class="drones page__drones" id="drones">
-        <h2 class="title drones__title text-gradient text-gradient_color_redorange">Nature from the air</h2>
-        <p class="text drones__description text_font-size_s text_line-height_m">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan. Integer sit amet lacus egestas, semper est quis, viverra ex.</p>
-        <ol class="advantages-list drones__advantages-list">
-            <li class="advantages-list__item">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.</li>
-            <li class="advantages-list__item">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</li>
-            <li class="advantages-list__item">Integer sit amet lacus egestas, semper est quis, viverra ex. Mauris consequat libero metus, nec ultricies sem efficitur quis.</li>
-            <li class="advantages-list__item">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.</li>
-            <li class="advantages-list__item">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</li>
-        </ol>
+        <div class="drones__content">
+            <h2 class="title drones__title text-gradient text-gradient_color_redorange">Nature from the air</h2>
+            <p class="text drones__description text_font-size_s text_line-height_m">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan. Integer sit amet lacus egestas, semper est quis, viverra ex.</p>
+            <ol class="advantages-list drones__advantages-list">
+                <li class="advantages-list__item">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.</li>
+                <li class="advantages-list__item">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</li>
+                <li class="advantages-list__item">Integer sit amet lacus egestas, semper est quis, viverra ex. Mauris consequat libero metus, nec ultricies sem efficitur quis.</li>
+                <li class="advantages-list__item">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci.</li>
+                <li class="advantages-list__item">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</li>
+            </ol>
+        </div>
     </section>
     <section class="products page__products" id="products">
-        <article class="product">
-            <div class="product__article">
-                <h2 class="title product__title text-gradient text-gradient_color_redorange">Nature from the air</h2>
-                <p class="text product__description text_font-size_s text_line-height_m">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</p>
-                <a class="button button_theme_blue">Ask for price</a>
-            </div>
-            <div class="products__video">
-                <div class="product__video-container">
-                    <img class="product__video" src="styles/img/product/product-video-1.png" alt="Nature from the air">
-                    <a class="product__video-play-button"></a>
+        <article class="product product_layout_flexbox product_items-arrangement_reverse">
+            <div class="product__article-container">
+                <div class="product__article">
+                    <h2 class="title product__title text-gradient text-gradient_color_redorange">Nature from the air</h2>
+                    <p class="text product__description text_font-size_s text_line-height_m">Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo. Nunc vel nibh tempor, pharetra lectus congue, luctus orci nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan.</p>
+                    <a class="button button_theme_blue">Ask for price</a>
                 </div>
+            </div>
+            <div class="product__video-container">
+                <img class="product__video" src="styles/img/product/product-video-1.png" alt="Nature from the air">
+                <a class="product__video-play-button"></a>
             </div>
         </article>
-        <article class="product">
-            <div class="product__article">
-                <h2 class="title product__title text-gradient text-gradient_color_redorange">City from the air</h2>
-                <p class="text product__description text_font-size_s text_line-height_m">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan. Integer sit amet lacus egestas, semper est quis, viverra ex. Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</p>
-                <a class="button button_theme_blue">Ask for price</a>
-            </div>
-            <div class="products__video">
-                <div class="product__video-container">
-                    <img class="product__video" src="styles/img/product/product-video-2.png" alt="City from the air">
-                    <a class="product__video-play-button"></a>
+        <article class="product product_layout_flexbox">
+            <div class="product__article-container">
+                <div class="product__article">
+                    <h2 class="title product__title text-gradient text-gradient_color_redorange">City from the air</h2>
+                    <p class="text product__description text_font-size_s text_line-height_m">Mauris consequat libero metus, nec ultricies sem efficitur quis. Integer bibendum eget metus ac accumsan. Integer sit amet lacus egestas, semper est quis, viverra ex. Pellentesque eget nunc sit amet urna ullamcorper fermentum et eu leo.</p>
+                    <a class="button button_theme_blue">Ask for price</a>
                 </div>
+            </div>
+            <div class="product__video-container">
+                <img class="product__video" src="styles/img/product/product-video-2.png" alt="City from the air">
+                <a class="product__video-play-button"></a>
             </div>
         </article>
     </section>
@@ -122,7 +124,7 @@
         <img class="page__map-image" src="styles/img/page/map.png" alt="Our location">
     </section>
     <footer class="page__footer">
-        <p class="text page__footer-text text_font-size_s text_line-height_m">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Try awsome tool for desgners <strong>symu.co</strong></p>
+        <p class="text page__footer-text text_font-size_s text_line-height_m">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Try awsome tool for desgners <strong>symu.co</strong></p>
     </footer>
 </body>
 </html>
