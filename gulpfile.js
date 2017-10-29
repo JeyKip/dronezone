@@ -17,7 +17,7 @@ const uglify = require('gulp-uglify');
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
 gulp.task('less', function(){
-    return gulp.src('dev/styles/*.less')
+    return gulp.src('dev/blocks/*.less')
                .pipe(gulpIf(isDev, sourcemap.init()))
                // fix pathes to images according to file structure of production build
                .pipe(less({
@@ -32,7 +32,7 @@ gulp.task('less', function(){
 });
 
 gulp.task('scripts', function(){
-    return gulp.src('dev/scripts/*.js')
+    return gulp.src('dev/blocks/**/*.js')
                .pipe(gulpIf(isDev, sourcemap.init()))
                .pipe(concat('script.js'))
                .pipe(uglify())
@@ -48,7 +48,7 @@ gulp.task('assets', function(){
 });
 
 gulp.task('images', function(){
-    return gulp.src('dev/styles/**/*.{png,svg,jpg,jpeg}')
+    return gulp.src('dev/blocks/**/*.{png,svg,jpg,jpeg}')
                .pipe(cached('images'))
                .pipe(gulp.dest('build/styles/img'));
 });
@@ -67,8 +67,8 @@ gulp.task('build', gulp.series(
     gulp.parallel('less', 'scripts', 'assets', 'fonts', 'images')));
 
 gulp.task('watch', function(){
-    gulp.watch('dev/styles/**/*.less', gulp.series('less'));
-    gulp.watch('dev/scripts/*.js', gulp.series('scripts'));
+    gulp.watch('dev/blocks/**/*.less', gulp.series('less'));
+    gulp.watch('dev/blocks/**/*.js', gulp.series('scripts'));
     gulp.watch('dev/assets/**/*.*', gulp.series('assets'))
         .on('unlink', function(filePath){ deleteFileFromCache('assets', filePath); });
 });
