@@ -13,18 +13,19 @@ const browserSync = require('browser-sync').create();
 const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
+const replace = require('gulp-replace-path');
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
 gulp.task('less', function(){
-    return gulp.src('dev/blocks/*.less')
+    return gulp.src('dev/styles/*.less')
                .pipe(gulpIf(isDev, sourcemap.init()))
-               // fix pathes to images according to file structure of production build
                .pipe(less({
-                    rootpath: 'img/',
                     relativeUrls: true
                 }))
                .pipe(autoprefixer())
+               .pipe(replace(/fonts/g, 'styles/fonts'))
+               .pipe(replace(/blocks/g, 'styles/img'))
                .pipe(cssmin())
                .pipe(rename({suffix: '.min'}))
                .pipe(gulpIf(isDev, sourcemap.write()))
@@ -58,16 +59,21 @@ gulp.task('fonts', function(){
                .pipe(gulp.dest('build/styles/fonts'));
 });
 
+gulp.task('scripts-libraries', function(){
+    return gulp.src(['node_modules/jquery/dist/jquery.min.js'], {since: gulp.lastRun('scripts-libraries')})
+               .pipe(gulp.dest('build/scripts/'));
+});
+
 gulp.task('clean', function(){
     return del('build');
 });
 
 gulp.task('build', gulp.series(
     'clean',
-    gulp.parallel('less', 'scripts', 'assets', 'fonts', 'images')));
+    gulp.parallel('less', 'scripts', 'scripts-libraries', 'assets', 'fonts', 'images')));
 
 gulp.task('watch', function(){
-    gulp.watch('dev/blocks/**/*.less', gulp.series('less'));
+    gulp.watch(['dev/blocks/**/*.less', 'dev/styles/*.less'], gulp.series('less'));
     gulp.watch('dev/blocks/**/*.js', gulp.series('scripts'));
     gulp.watch('dev/assets/**/*.*', gulp.series('assets'))
         .on('unlink', function(filePath){ deleteFileFromCache('assets', filePath); });

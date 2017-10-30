@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JeyKip/dronezone#readme",
   "dependencies": {
+    "jquery": "^3.2.1",
     "normalize.css": "^7.0.0"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "gulp-if": "^2.0.2",
     "gulp-less": "^3.3.2",
     "gulp-rename": "^1.2.2",
+    "gulp-replace-path": "^0.4.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "path": "^0.12.7"

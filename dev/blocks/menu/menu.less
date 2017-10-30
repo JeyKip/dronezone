@@ -23,15 +23,18 @@
 
     &__link {
         display: block;
-        padding: 0.5em 0.75em;
+        padding: 0.25em 0.75em;
         text-decoration: none;
         color: @base-text-color;
         transition: all .2s ease;
         border: 1px solid transparent;
         border-radius: 1em;
         line-height: 1.5;
+        cursor: pointer;
 
         @media screen and (min-width: 768px) {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
             color: @base-white-color;
             font-size: 0.75em;
         }
