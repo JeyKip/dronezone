@@ -17,7 +17,8 @@
         });
 
         $menuItems.on('click', function(){
-            $burger.trigger('click');
+            $burger.removeClass('burger_opened');
+            $menu.css('max-height', '');
         });
     });
 })(jQuery);

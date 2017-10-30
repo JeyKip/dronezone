@@ -11,34 +11,32 @@
         return  height;
     };
     var isMobileScreen = function(){
-        return $(window).width() < 768;
+        return $(window).outerWidth() < 768;
+    };
+    var recalculateTopMenuPosition = function(){
+        $navigation.removeClass('header__navigation-fixed');
+        $tagline.css('padding-top', '');
+
+        var scrollTopPosition = $(window).scrollTop();
+        var menuHeight = getTopMenuHeight();
+        
+        if (scrollTopPosition > menuHeight || isMobileScreen()){
+            $navigation.addClass('header__navigation-fixed');
+
+            var taglinePaddingTop = parseInt($tagline.css('padding-top')) || 0;
+            $tagline.css('padding-top', taglinePaddingTop + menuHeight);
+        }
     };
 
     $(function(){
-        if (isMobileScreen()){
-            $navigation.addClass('header__navigation-fixed');
-        }
 
-        $(window).on('scroll', function(e){
-            if (isMobileScreen()){
-                return;
-            }
+        recalculateTopMenuPosition();
 
-            var scrollTopPosition = $(this).scrollTop();
-            var menuHeight = getTopMenuHeight();
-
-            if (scrollTopPosition > menuHeight){
-                if (!$navigation.hasClass('header__navigation-fixed')){
-                    var taglinePaddingTop = parseInt($tagline.css('padding-top')) || 0;
-
-                    $navigation.addClass('header__navigation-fixed');
-                    $tagline.css('padding-top', taglinePaddingTop + menuHeight);
-                }
-            }
-            else{
-                $navigation.removeClass('header__navigation-fixed');
-                $tagline.css('padding-top', '');
-            }
+        $(window).on('scroll', function(){
+            recalculateTopMenuPosition();
+        });
+        $(window).on('resize', function(){
+            recalculateTopMenuPosition();
         });
 
         $menu.find('.menu__link').on('click', function(){
